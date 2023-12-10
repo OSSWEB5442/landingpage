@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Agence de Marketing Digital</title>
+
+    <!-- Ajoutez les liens vers Tailwind CSS et Font Awesome CDN ici -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ... (Autres balises head) ... -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.css">
+<!-- ... (Autres balises head) ... -->
+<style>
+    /* CSS personnalisé pour styliser la barre de défilement */
+.simplebar-scrollbar::before {
+    background-color: #4299e1; /* Couleur de fond de la poignée de défilement */
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+    opacity: 0.8; /* Opacité de la poignée de défilement lorsque visible */
+}
+
+/* Icône de Contact Flottante */
+.fixed-contact-icon {
+    position: fixed;
+    bottom: 4%;
+    right: 4%;
+    background-color: #4299e1;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Dans le corps du document HTML -->
+
+<header class="bg-gray-900 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div>
+            <img src="assets/logo.png" alt="Logo de l'agence" class="h-10">
+        </div>
+
+        <!-- Menu Responsive -->
+        <nav class="hidden md:flex space-x-4">
+            <a href="#" class="hover:text-gray-400">Accueil</a>
+            <a href="#" class="hover:text-gray-400">Services</a>
+            <a href="#" class="hover:text-gray-400">À Propos</a>
+            <a href="#" class="hover:text-gray-400">Contact</a>
+        </nav>
+
+        <!-- Icônes de Réseau Social -->
+        <div class="hidden md:flex space-x-4">
+            <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="hidden md:flex">
+            <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600">Contactez-nous</a>
+        </div>
+
+        <!-- Bouton de Menu Responsive (Hamburger) pour les écrans plus petits -->
+        <div class="md:hidden">
+            <button id="menuBtn" class="text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+<section class="container mx-auto flex items-center justify-between p-8 md:p-16 h-full">
+    <!-- Colonne de Texte -->
+    <div class="md:w-1/2">
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight animate__animated animate__fadeIn animate__delay-1s">Smart Strategies, Digital Excellence</h1>
+        <p class="text-lg md:text-xl text-gray-700 mt-4 mb-8 animate__animated animate__fadeIn animate__delay-2s">Transformez vos idées en succès numérique avec nos stratégies intelligentes. Nous fusionnons l'innovation avec l'excellence digitale pour propulser votre entreprise vers de nouveaux sommets. Découvrez comment Smart peut être votre partenaire clé dans l'ère numérique.</p>
+        <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 inline-block animate__animated animate__fadeIn animate__delay-3s">Découvrir</a>
+    </div>
+
+    <!-- Colonne d'Image -->
+    <div class="md:w-1/2">
+        <img src="assets/hero.png" alt="Illustration" class="w-full h-auto rounded-lg shadow-lg animate__animated animate__fadeIn animate__delay-4s">
+    </div>
+</section>
+<section class="container mx-auto p-8 mt-8">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">Nos Services</h2>
+
+    <!-- Cartes des Services -->
+    <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+        <!-- Carte 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+            <i class="fa fa-chart-line text-4xl text-blue-500 mb-4"></i>
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Stratégie Numérique</h3>
+            <p class="text-gray-600 mb-4">Développez une stratégie numérique efficace pour atteindre vos objectifs commerciaux.</p>
+            <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600">En savoir plus</a>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center mt-4 md:mt-0">
+            <i class="fa fa-mobile-alt text-4xl text-green-500 mb-4"></i>
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Optimisation Mobile</h3>
+            <p class="text-gray-600 mb-4">Assurez-vous que votre présence en ligne est optimisée pour les utilisateurs mobiles.</p>
+            <a href="#" class="bg-green-500 text-white py-2 px-4 rounded-full hover:bg-green-600">Découvrir</a>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center mt-4 md:mt-0">
+            <i class="fa fa-comment-dots text-4xl text-purple-500 mb-4"></i>
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Gestion des Réseaux Sociaux</h3>
+            <p class="text-gray-600 mb-4">Boostez votre présence sur les réseaux sociaux avec des stratégies de gestion efficaces.</p>
+            <a href="#" class="bg-purple-500 text-white py-2 px-4 rounded-full hover:bg-purple-600">Commencer</a>
+        </div>
+    </div>
+</section>
+<section class="container mx-auto p-8 mt-8 flex flex-col md:flex-row items-center">
+    <!-- Colonne avec Image et Icônes de Réseau Social -->
+    <div class="md:w-1/2 mb-4 md:mb-0">
+        <img src="assets/about.jpg" alt="Image d'illustration" class="w-full h-auto rounded-lg shadow-md">
+        
+        <!-- Icônes de Réseau Social -->
+        <div class="flex mt-4 space-x-4">
+            <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-facebook-square text-2xl"></i></a>
+            <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter-square text-2xl"></i></a>
+            <a href="#" class="text-red-500 hover:text-red-700"><i class="fab fa-youtube-square text-2xl"></i></a>
+            <a href="#" class="text-purple-500 hover:text-purple-700"><i class="fab fa-linkedin text-2xl"></i></a>
+        </div>
+    </div>
+
+    <!-- Colonne avec Texte Descriptif et CTA -->
+    <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">À Propos de Nous</h2>
+        <p class="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600">En savoir plus</a>
+    </div>
+</section>
+
+<section class="container mx-auto p-8 mt-8">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">Études de Cas/Projets Récents</h2>
+
+    <!-- Cartes des Projets -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Projet 1 -->
+        <div class="relative group">
+            <img src="assets/about.jpg" alt="Projet 1" class="w-full h-64 object-cover rounded-lg shadow-md transition duration-300 transform group-hover:scale-105">
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 bg-black bg-opacity-50 hover:opacity-100 transition duration-300 transform group-hover:scale-100">
+                <h3 class="text-white text-lg font-semibold">Nom du Projet 1</h3>
+            </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="relative group">
+            <img src="assets/about.jpg" alt="Projet 2" class="w-full h-64 object-cover rounded-lg shadow-md transition duration-300 transform group-hover:scale-105">
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 bg-black bg-opacity-50 hover:opacity-100 transition duration-300 transform group-hover:scale-100">
+                <h3 class="text-white text-lg font-semibold">Nom du Projet 2</h3>
+            </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="relative group">
+            <img src="assets/about.jpg" alt="Projet 3" class="w-full h-64 object-cover rounded-lg shadow-md transition duration-300 transform group-hover:scale-105">
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 bg-black bg-opacity-50 hover:opacity-100 transition duration-300 transform group-hover:scale-100">
+                <h3 class="text-white text-lg font-semibold">Nom du Projet 3</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container mx-auto p-8 mt-8">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">Témoignages</h2>
+
+    <!-- Cartes de Témoignages -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Témoignage 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="assets/testi1.jpg" alt="Témoin 1" class="w-16 h-16 rounded-full mb-4 mx-auto">
+            <h3 class="text-lg font-semibold mb-2">Nom du Témoin 1</h3>
+            <p class="text-gray-600 mb-2">Fonction du Témoin 1</p>
+            <p class="text-gray-800 mb-4">"Message du témoin 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+            <div class="flex justify-center">
+                <a href="#" class="text-blue-500 hover:text-blue-700 mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-blue-500 hover:text-blue-700 mx-2"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <!-- Témoignage 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="assets/testi2.jpg" alt="Témoin 2" class="w-16 h-16 rounded-full mb-4 mx-auto">
+            <h3 class="text-lg font-semibold mb-2">Nom du Témoin 2</h3>
+            <p class="text-gray-600 mb-2">Fonction du Témoin 2</p>
+            <p class="text-gray-800 mb-4">"Message du témoin 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+            <div class="flex justify-center">
+                <a href="#" class="text-blue-500 hover:text-blue-700 mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-blue-500 hover:text-blue-700 mx-2"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <!-- Témoignage 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="assets/testi3.jpg" alt="Témoin 3" class="w-16 h-16 rounded-full mb-4 mx-auto">
+            <h3 class="text-lg font-semibold mb-2">Nom du Témoin 3</h3>
+            <p class="text-gray-600 mb-2">Fonction du Témoin 3</p>
+            <p class="text-gray-800 mb-4">"Message du témoin 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+            <div class="flex justify-center">
+                <a href="#" class="text-blue-500 hover:text-blue-700 mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-blue-500 hover:text-blue-700 mx-2"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <!-- Témoignage 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="assets/testi4.jpg" alt="Témoin 4" class="w-16 h-16 rounded-full mb-4 mx-auto">
+            <h3 class="text-lg font-semibold mb-2">Nom du Témoin 4</h3>
+            <p class="text-gray-600 mb-2">Fonction du Témoin 4</p>
+            <p class="text-gray-800 mb-4">"Message du témoin 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+            <div class="flex justify-center">
+                <a href="#" class="text-blue-500 hover:text-blue-700 mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-blue-500 hover:text-blue-700 mx-2"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="container mx-auto p-8 mt-8">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">FAQ</h2>
+
+    <!-- Accordéons des FAQ -->
+    <div class="accordion">
+        <!-- Groupe 1 -->
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <div class="accordion-icon">+</div>
+                <h3 class="accordion-title">Groupe 1</h3>
+            </div>
+            <div class="accordion-content hidden">
+                <p>Réponse à la question 1 du Groupe 1.</p>
+            </div>
+        </div>
+
+        <!-- Groupe 2 -->
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <div class="accordion-icon">+</div>
+                <h3 class="accordion-title">Groupe 2</h3>
+            </div>
+            <div class="accordion-content hidden">
+                <p>Réponse à la question 1 du Groupe 2.</p>
+                <p>Réponse à la question 2 du Groupe 2.</p>
+            </div>
+        </div>
+
+        <!-- Groupe 3 -->
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <div class="accordion-icon">+</div>
+                <h3 class="accordion-title">Groupe 3</h3>
+            </div>
+            <div class="accordion-content hidden">
+                <p>Réponse à la question 1 du Groupe 3.</p>
+                <p>Réponse à la question 2 du Groupe 3.</p>
+                <p>Réponse à la question 3 du Groupe 3.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto p-8 mt-8 flex flex-col md:flex-row">
+    <!-- Colonne des Informations de Contact -->
+    <div class="md:w-1/2 mb-8 md:mb-0">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Contactez-nous</h2>
+        <div class="flex items-center mb-4">
+            <i class="fas fa-map-marker-alt text-blue-500 text-xl mr-2"></i>
+            <p>123 Rue de la République, 75001 Paris, France</p>
+        </div>
+        <div class="flex items-center mb-4">
+            <i class="fas fa-envelope text-blue-500 text-xl mr-2"></i>
+            <p>info@votreagence.com</p>
+        </div>
+        <div class="flex items-center mb-4">
+            <i class="fas fa-phone-alt text-blue-500 text-xl mr-2"></i>
+            <p>+33 1 23 45 67 89</p>
+        </div>
+        <div class="flex items-center mb-4">
+            <i class="fab fa-twitter text-blue-500 text-xl mr-2"></i>
+            <p>@votreagence</p>
+        </div>
+    </div>
+
+    <!-- Colonne du Formulaire de Contact -->
+    <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Laissez-nous un message</h2>
+        <form class="space-y-4">
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Nom</label>
+                <input type="text" id="name" name="name" class="mt-1 p-2 w-full border rounded-md">
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md">
+            </div>
+            <div>
+                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                <textarea id="message" name="message" rows="4" class="mt-1 p-2 w-full border rounded-md"></textarea>
+            </div>
+            <div>
+                <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600">Envoyer</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<footer class="bg-gray-800 text-white p-8">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Partie 1 : À Propos -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">À Propos de Nous</h3>
+            <p class="text-gray-300 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <!-- Partie 2 : Liens Rapides -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">Liens Rapides</h3>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-blue-500">Accueil</a></li>
+                <li><a href="#" class="hover:text-blue-500">Services</a></li>
+                <li><a href="#" class="hover:text-blue-500">Projets</a></li>
+                <li><a href="#" class="hover:text-blue-500">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Partie 3 : Newsletter -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+            <p class="text-gray-300 mb-4">Recevez nos dernières actualités directement dans votre boîte de réception.</p>
+            <form class="flex">
+                <input type="email" placeholder="Votre adresse e-mail" class="w-full p-2 border rounded-l-md" required>
+                <button type="submit" class="bg-blue-500 text-white p-2 rounded-r-md">S'inscrire</button>
+            </form>
+        </div>
+
+        <!-- Partie 4 : Suivez-nous -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">Suivez-nous</h3>
+            <div class="flex space-x-4">
+                <a href="#" class="text-gray-300 hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-300 hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-300 hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-gray-300 hover:text-blue-500"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="fixed bottom-4 right-4 bg-blue-500 text-white p-3 rounded-full shadow-md cursor-pointer">
+    <i class="fas fa-envelope"></i>
+</div>
+<!-- Script pour gérer le menu responsive -->
+<script>
+    document.getElementById('menuBtn').addEventListener('click', function () {
+        document.querySelector('nav').classList.toggle('hidden');
+    });
+</script>
+<script>
+    // Script pour gérer les accordéons
+    document.addEventListener('DOMContentLoaded', function () {
+        const accordions = document.querySelectorAll('.accordion');
+
+        accordions.forEach(accordion => {
+            const groups = accordion.querySelectorAll('.accordion-group');
+
+            groups.forEach(group => {
+                const heading = group.querySelector('.accordion-heading');
+                const content = group.querySelector('.accordion-content');
+
+                heading.addEventListener('click', function () {
+                    if (content.classList.contains('hidden')) {
+                        // Ouvre l'accordéon
+                        content.classList.remove('hidden');
+                        heading.querySelector('.accordion-icon').textContent = '-';
+                    } else {
+                        // Ferme l'accordéon
+                        content.classList.add('hidden');
+                        heading.querySelector('.accordion-icon').textContent = '+';
+                    }
+                });
+            });
+        });
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js"></script>
+<script>
+    $(document).ready(function () {
+        new SimpleBar(document.getElementById('your-content-div'));
+    });
+</script>
+
+</body>
+</html>
